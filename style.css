@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root{
+    --white: white;
+    --black: black;
+    --silver: #DDDDDD;
+    --shadow: 0px 15px 10px -15px #111;
+}
+
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', cursive;
+    background-color: var(--silver);
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    height: 100px;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  var(--black);
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.addBook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    padding: 10px;
+}
+
+button{
+    font-size: 1.5rem;
+    border-radius: 5%;
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+button:hover{
+    border-color: whitesmoke;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* The pop up form - hidden by default */
+
+#formOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Arkaplanı opaklaştırmak için */
+    z-index: 999;
+  }
+
+.form-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .form-container {
+    display: block;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #read{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    gap: 20px;
+  }
+
+
+  /* Book Cards */
+
+  #cnt-output{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  }
+
+  .output{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+
+  .card{
+    background-color: var(--white);
+    border: 6px solid var(--black);
+    border-radius: 5%;
+    color: var(--black);
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+
+  }
